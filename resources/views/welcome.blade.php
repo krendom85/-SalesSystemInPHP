@@ -1192,7 +1192,7 @@ use App\Models\Client;
                   Capacitacion en gestion publica a GADS parroquiales rurales
                 </li>
               </ol>
-              <button><a href="{{route('clients.create',$client)}}">Comprar</a></button>
+              <button><a href="/registerBuy/1">Comprar</a></button>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-1555">
@@ -1214,7 +1214,7 @@ use App\Models\Client;
                   Capacitacion en gestion publica a GADS parroquiales rurales
                 </li>
               </ol>
-              <button><a href="{{route('clients.create',$client)}}">Comprar</a></button>
+              <button><a href="/registerBuy/2">Comprar</a></button>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
@@ -1235,7 +1235,7 @@ use App\Models\Client;
                   Capacitacion en gestion publica a GADS parroquiales rurales
                 </li>
               </ol>
-              <button><a href="{{route('clients.create')}}">Comprar</a></button>
+              <button><a href="/registerBuy/3">Comprar</a></button>
             </div>
           </div>
         </div>
@@ -1332,18 +1332,9 @@ use App\Models\Client;
                       >10 pasos para llevar una contabilidad sana</a
                     >
                   </h4>
-                  <p>
-                    Establecer un sistema de contabilidad: Es importante tener
-                    un sistema de contabilidad en el lugar para registrar las
-                    transacciones financieras de manera ordenada y precisa.
-                    <br />Seleccionar un software contable: Es importante
-                    seleccionar un software contable que se ajuste a las
-                    necesidades de la empresa y sea fácil de usar. Establecer un
-                    calendario de contabilidad: Es importante e
-                  </p>
                 </div>
                 <span>
-                  <a href="blog.html" class="ready-btn">Leer Mas</a>
+                  <a href="{{route('blog1')}}" class="ready-btn">Leer Mas</a>
                 </span>
               </div>
               <!--Fin blog izquierda -->
@@ -1370,18 +1361,9 @@ use App\Models\Client;
                   <h4>
                     <a href="blog.html">Como tener mejor manejo de dinero.</a>
                   </h4>
-                  <p>
-                    Tener un mejor manejo de dinero implica establecer metas
-                    financieras, planificar y controlar los gastos, y ahorrar e
-                    invertir de manera inteligente. Aquí hay algunos pasos que
-                    puedes seguir para mejorar tu manejo del dinero: <br />1.
-                    Establece metas financieras a corto y largo plazo.
-                    Identifica lo que quieres lograr financieramente y establece
-                    metas para alcanzarlos.
-                  </p>
                 </div>
                 <span>
-                  <a href="blog.html" class="ready-btn">Leer Mas</a>
+                  <a href="{{route('blog2')}}" class="ready-btn">Leer Mas</a>
                 </span>
               </div>
               <!-- fin blog -->
@@ -1408,18 +1390,9 @@ use App\Models\Client;
                   <h4>
                     <a href="blog.html">5 pasos para salir de deudas</a>
                   </h4>
-                  <p>
-                    1. Haga una lista de sus deudas: Anote todas sus deudas,
-                    incluyendo el tipo de deuda, el monto total y la tasa de
-                    interés. Esto le dará una idea clara de su situación
-                    financiera y le ayudará a priorizar sus deudas.<br />
-                    2. Establezca un presupuesto: Establezca un presupuesto y
-                    trate de reducir sus gastos para poder dedicar más dinero a
-                    pagar sus deudas.<br />
-                  </p>
                 </div>
                 <span>
-                  <a href="blog.html" class="ready-btn">Leer mas</a>
+                  <a href="{{route('blog3')}}" class="ready-btn">Leer mas</a>
                 </span>
               </div>
             </div>
@@ -1673,5 +1646,4 @@ use App\Models\Client;
     </footer>
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
 @endsection

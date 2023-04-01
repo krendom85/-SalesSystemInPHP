@@ -24,6 +24,10 @@
                     <x-nav-link :href="route('futureEmployees.index')">
                         {{ __('Peticiones Trabajo') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('posts.index')">
+                        {{ __('Post') }}
+                    </x-nav-link>
                 </div>
             </div>
 

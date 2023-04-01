@@ -18,19 +18,63 @@ class ClientController extends Controller
         return view('clients.create',['client'=>$client]);
     }
 
+    public function confirm(Request  $request){
+        $name = $request->input('user');
+        $password = $request->input('password');
+        $data = Client::pluck('id');
+        // dd($name);
+        // dd($password);
+        foreach($data as $item){
+            $data_user = Client::find($item);
+            if($name == $data_user->name and $password == $data_user->password){
+                dd("si existe");
+            }
+        }
+        return view('clients.login');
+    }
+  
     public function store(Request $request){
+        $plan = 0;
+        
+        switch($request->input("plan")){
+            case "BASICO":
+                $plan = 1;
+                break;
+            case "STANDARD":
+                $plan = 2;
+                break;
+            case "PREMIUM":
+                $plan = 3;
+                break;
+        }
+
+
+        $password = $request->input('password');
+        $email =  $request->input('email');
+        $data = Client::pluck('id');
+        // dd($name);
+        // dd($password);
+        foreach($data as $item){
+            $data_user = Client::find($item);
+            if($email == $data_user->email){
+                return view('clients.result',['plan'=>$data_user->plan]);
+            }
+        }
 
         $client = new Client();
-
+  
         $client->name = $request->input('name');
-        $client->email = $request->input('email');
-        $client->password = "password";
-        $client->plan = intval($request->input('plan'));
+        $client->email = $email;
+        $client->password = $password;
+        $client->plan = $plan;
+        $client->status = 1;
         $client->status = intval($request->input('status'));
         $client->init_at = date('Y-m-d h:m:s');
         $client->expires_at = date('Y-m-d h:m:s');
 
         $client->save();
+
+        return view("welcome");
     }
 
     public function edit(Client $client){
